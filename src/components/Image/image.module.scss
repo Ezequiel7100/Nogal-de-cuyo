@@ -1,0 +1,25 @@
+.brHard {
+  border-radius: 20px;
+}
+
+.brMedium {
+  border-radius: 10px;
+}
+
+.brSoft {
+  border-radius: 5px;
+}
+
+.cover {
+  object-fit: cover;
+  object-position: center;
+}
+
+.contain {
+  object-fit: contain;
+  object-position: center;
+}
+
+.reverse {
+  transform: scaleX(-1);
+}

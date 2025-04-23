@@ -1,0 +1,33 @@
+// .banner {
+//   @include background-image("/assets/filters_image.jpg");
+//   height: 300px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-bottom: 25px;
+//   position: relative;
+// }
+.unitsContainer {
+  display: flex;
+  justify-content: center;
+  @include is-mobile {
+    justify-content: flex-start;
+  }
+  .units {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+    margin-block: 30px;
+    width: 100%;
+    @include is-mobile {
+      flex-direction: column;
+    }
+  }
+}
+
+.othersServices {
+  margin-inline: 20px;
+  border-top: 1px solid rgb(153 153 153 / 69%);
+  padding-top: 20px;
+}

@@ -1,0 +1,183 @@
+.container {
+  position: relative;
+  .label {
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    height: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  .navbarScroll {
+    position: fixed;
+    transform: translateY(calc(-200% - 20px));
+    z-index: 10;
+    width: 100%;
+  }
+  .show {
+    animation: 0.3s both slideIn;
+  }
+  .notShow {
+    animation: 0.3s both slideOut;
+  }
+}
+
+.info {
+  background-color: $primary-color;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 15px 50px;
+
+  .socials {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  p {
+    display: flex;
+    gap: 10px;
+    font-weight: 500;
+  }
+}
+.nav {
+  background-color: white;
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding-inline: 68px;
+  @include is-tablet {
+    padding-inline: 20px;
+  }
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  ul {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    justify-content: space-between;
+    .navLogo {
+      position: relative;
+      height: 100%;
+      @include is-tablet {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 69%;
+      }
+    }
+    .navLink {
+      height: 100%;
+      text-align: center;
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      .active {
+        color: $primary-color;
+        text-decoration: underline 2px;
+      }
+      &:hover {
+        a {
+          color: $primary-color;
+          text-decoration: underline 2px;
+        }
+      }
+      a {
+        display: flex;
+        align-items: center;
+        color: $black;
+        font-weight: 600;
+        justify-content: center;
+        height: 100%;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        img {
+          height: 60px;
+        }
+      }
+    }
+
+    .options {
+      background-color: white;
+      position: absolute;
+      top: -240px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      height: fit-content;
+      max-height: 0;
+      width: 250px;
+      border-top: 3px solid $primary-color;
+      margin-top: -20px;
+      transition: margin-top 0.2s ease;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      &.open {
+        max-height: fit-content;
+        padding-block: 10px;
+        top: 70px;
+        margin-top: 0;
+      }
+      a {
+        width: 100%;
+        text-decoration: none !important;
+      }
+      li {
+        color: #1f1f1fc2;
+        font-weight: 600;
+        text-align: start;
+        text-transform: initial;
+        width: 100%;
+        padding: 10px 20px;
+      }
+      li:hover {
+        background-color: $primary-color;
+        color: white;
+        transition: background-color 0.2s linear, color 0.2s linear;
+      }
+    }
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(calc(-200% - 20px));
+  }
+  10% {
+    opacity: 1;
+
+    transform: translateY(calc(-200% - 20px));
+  }
+  100% {
+    opacity: 1;
+
+    transform: translateY(calc(-100% - 20px));
+  }
+}
+@keyframes slideOut {
+  100% {
+    opacity: 0;
+    transform: translateY(calc(-200% - 20px));
+  }
+  10% {
+    opacity: 1;
+
+    transform: translateY(calc(-100% - 20px));
+  }
+  0% {
+    opacity: 1;
+
+    transform: translateY(calc(-100% - 20px));
+  }
+}

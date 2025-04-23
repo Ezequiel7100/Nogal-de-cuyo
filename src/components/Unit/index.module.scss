@@ -1,0 +1,36 @@
+.unit {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-direction: column;
+  .btn {
+    background-color: $primary-color;
+    padding: 12px 32px 11px;
+    border-radius: 24px;
+    text-transform: uppercase;
+    color: white;
+  }
+  .img {
+    position: relative;
+    width: fit-content;
+    img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      @include is-tablet {
+        width: 150px;
+        height: 150px;
+      }
+    }
+    .border {
+      position: absolute;
+      top: 48.5%;
+      left: 50.5%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      width: 110%;
+      height: 110%;
+    }
+  }
+}

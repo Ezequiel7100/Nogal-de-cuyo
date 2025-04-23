@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  background-color: $primary-color;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

@@ -1,0 +1,76 @@
+.container {
+  position: relative;
+  height: auto;
+  padding-block: 10px;
+  .image {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  .location {
+    color: white;
+    display: flex;
+    text-align: start;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    svg {
+      margin: 0;
+    }
+    h3 {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 52px;
+      max-width: 580px;
+      @include is-mobile {
+        font-size: 32px;
+        width: 272px;
+      }
+    }
+    p {
+      letter-spacing: 1px;
+      margin-left: 190px;
+      font-weight: 500;
+      margin-block: 30px;
+      max-width: 580px;
+      @include is-mobile {
+        margin-block: 5px;
+        font-size: 15px;
+        margin-left: 15px;
+      }
+    }
+  }
+  .backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #673532;
+    opacity: 0.6;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+}
+.tabletImg {
+  display: none;
+  @include is-mobile {
+    display: block;
+    margin-top: 20px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+
+.desktopImage {
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  @include is-mobile {
+    display: none;
+  }
+}

@@ -1,0 +1,31 @@
+@mixin is-tablet {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin is-mobile {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+@mixin errorMessage {
+  position: absolute;
+  font: {
+    size: 0.75rem;
+    weight: 400;
+  }
+  letter-spacing: 0.025rem;
+  color: #d9585e;
+  font-weight: 700 !important;
+  border-color: #d9585e;
+  margin-top: 2px;
+  font-weight: 700;
+}
+
+@mixin background-image($image) {
+  background-position: 50%;
+  background-image: url($image);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
